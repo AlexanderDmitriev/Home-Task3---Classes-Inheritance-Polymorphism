@@ -9,6 +9,9 @@ circle(int x1, int y1, int radius1){
 	square=3.14*radius*radius;}
 //////////
 public String toString(){
-	return "Circle[center(x= " + xCenter + ", y= " + yCenter + ") R = " + radius + "Square =  "+square + "]"; 
+	return "Circle[center(x= " + xCenter + ", y= " + yCenter + ") R = " + radius + "  Square =  "+square + "]"; }
+public void scaling(int delta){
+	radius*=delta;
+	square=3.14*radius*radius;
 }
 }

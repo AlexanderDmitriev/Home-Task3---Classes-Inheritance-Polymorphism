@@ -5,6 +5,7 @@ public class quadrate extends Figure {
 	quadrate(int x, int y, int a1){
 		 xCenter=x;                            
 		  yCenter=y;
+		  a=a1;
 		  square=a*a;}
 	quadrate (int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4){
 		xCenter=(x3-x1)/2;                //    2     3
@@ -13,5 +14,9 @@ public class quadrate extends Figure {
 	}
 	public String toString(){
 		return "quadrate[quadrate(x= " + xCenter + ", y= " + yCenter + ") Side = " + a + "Square =  "+square + "]"; 
+	}
+	public void scaling(int delta){
+		a*=delta;
+		square=a*a;
 	}
 }

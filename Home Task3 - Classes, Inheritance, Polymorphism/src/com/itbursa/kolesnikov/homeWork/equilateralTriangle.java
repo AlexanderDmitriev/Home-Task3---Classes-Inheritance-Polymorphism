@@ -15,6 +15,10 @@ public class equilateralTriangle extends Figure {
 		square=(Math.sqrt(3)*a*a)/4;
 	}
 	public String toString(){
-		return "equilateralTriangle[equilateralTriangle(x= " + xCenter + ", y= " + yCenter + ") Side = " + a + "Square =  "+square + "]"; 
+		return "equilateralTriangle[equilateralTriangle(x= " + xCenter + ", y= " + yCenter + ") Side = " + a + "   Square =  "+square + "]"; 
+	}
+	public void scaling(int delta){
+		a*=delta;
+		square=(Math.sqrt(3)*a*a)/4;
 	}
 }

@@ -1,10 +1,11 @@
 package com.itbursa.kolesnikov.homeWork;
 
 public class trapeze extends Figure { 
-	int middleLine;
-	trapeze (int x, int y,int middleLine1, int high){  // Конструктор по средней линии и высоте
+	int middleLine, high;
+	trapeze (int x, int y,int middleLine1, int high1){  // Конструктор по средней линии и высоте
 		xCenter=x;
 		yCenter=y;
+		high=high1;
 		square=middleLine1*high;
 		middleLine=middleLine1;
 	}
@@ -15,6 +16,11 @@ public class trapeze extends Figure {
 		middleLine =((x2-x3)+(x1-x4))/2;
 	}
 	public String toString(){
-		return "trapeze[trapeze(x= " + xCenter + ", y= " + yCenter + ")" + "middleLine = " +  middleLine + "Square =  "+square + "]"; 
+		return "trapeze[trapeze(x= " + xCenter + ", y= " + yCenter + ")" + "middleLine = " +  middleLine + "  Square =  "+square + "]"; 
+	}
+	public void scaling(int delta){
+		middleLine*=delta;
+		high*=delta;
+		square=middleLine*high;
 	}
 }

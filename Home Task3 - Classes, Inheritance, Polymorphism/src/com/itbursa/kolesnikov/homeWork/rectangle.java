@@ -5,6 +5,8 @@ public class rectangle extends Figure {
 	rectangle(int x,int y, int a1,int b1){
 		 xCenter=x;                            
 		  yCenter=y;
+		  a=a1;
+		  b=b1;
 		  square=a1*b1;}
 	
 	rectangle(int x1,int y1, int x2,int y2, int x3,int y3, int x4,int y4){
@@ -12,6 +14,11 @@ public class rectangle extends Figure {
 		yCenter=(y1-y2)/2;  //  1       4 
 		square=(x1-x4)*(y1-y2);}
 	public String toString(){
-		return "rectangle[rectangle(x= " + xCenter + ", y= " + yCenter + ") Side A = " + a + "Side B = " + b + "Square =  "+square + "]"; 
+		return "rectangle[rectangle(x= " + xCenter + ", y= " + yCenter + ") Side A = " + a + "Side B = " + b + "  Square =  "+square + "]"; 
+	}
+	public void scaling(int delta){
+		a*=delta;
+		b*=delta;
+		square=a*b;
 	}
 }

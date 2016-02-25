@@ -5,8 +5,8 @@ public class ellipse extends Figure{
 	ellipse(int x1,int y1, int h1, int l1){ //Constructor with small half-axis and bigger half-axis
 		 xCenter=x1;
 		yCenter=y1;
-		int h=h1;
-		int l=l1;
+		h=h1;
+		l=l1;
 		square=h*l*3.14;
 	}
 	ellipse(int xStart, int yStart, int xEnd, int yEnd, int xHigh, int yHigh, int xLow, int yLow){  //Constructor by 4 points
@@ -16,6 +16,11 @@ public class ellipse extends Figure{
 		l=yEnd-yStart;   //small half-axis
 		square=h*l*3.14;}
 	public String toString(){
-		return "ellipse[ellipse(x= " + xCenter + ", y= " + yCenter + ") small half-axis = " + h + "bigger half-axis = " + l + "Square =  "+square + "]"; 
+		return "ellipse[ellipse(x= " + xCenter + ", y= " + yCenter + ") small half-axis = " + h + "  bigger half-axis = " + l + "  Square =  "+square + "]"; 
+	}
+	public void scaling(int delta){
+		h*=delta;
+		l*=delta;
+		square=h*l*3.14;
 	}
 }

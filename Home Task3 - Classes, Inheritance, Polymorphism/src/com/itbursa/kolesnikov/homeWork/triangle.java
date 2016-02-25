@@ -19,6 +19,13 @@ public class triangle extends Figure{
 		sideB=(int)(Math.sqrt((Math.pow(x3-x2, 2))+(Math.pow(y2-y3, 2))));
 		sideC=x3-x1;}
 	public String toString(){
-		return "triangle[triangle(x= " + xCenter + ", y= " + yCenter + ") Side A = " + sideA + "Side A = " + sideB + "sideC = " + sideC + "Square =  "+square + "]"; 
+		return "triangle[triangle(x= " + xCenter + ", y= " + yCenter + ") Side A = " + sideA + "  Side B = " + sideB + "  sideC = " + sideC + "  Square =  "+square + "]"; 
+	}
+	public void scaling(int delta){
+		sideA*=delta;
+		sideB*=delta;
+		sideC*=delta;
+		double R=Math.sqrt((Math.pow(sideA, 2)*(Math.pow(sideB,2))*(Math.pow(sideC, 2)))/((sideA+sideB+sideC)*(-sideA+sideB+sideC)*(sideA-sideB+sideC)*(sideA+sideB-sideC)));
+		square=(sideA*sideB*sideC)/(4*R);
 	}
 }
